@@ -1,27 +1,33 @@
 import styled from "styled-components";
 import AvatarImage4 from "../assets/avatarImage4.jpg";
 import { cardShadow, hoverEffect } from "../utils";
-import React, { useState } from "react";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-function Projects() {
-  const [inpval, setInput] = useState({
-    Interest: "",
-  });
+//import React, { useState } from "react";
+//import Form from "react-bootstrap/Form";
+//import Button from "react-bootstrap/Button";
 
-  const getdata = (e) => {
-    const { value, name } = e.target;
-    setInput(() => {
-      return {
-        ...inpval,
-        [name]: value,
-      };
-    });
-  };
-  const addData = (e) => {
-    e.preventDefault();
-    console.log(addData);
-  };
+//import ButtonGroup from "react-bootstrap/ButtonGroup";
+import Dropdown from "react-bootstrap/Dropdown";
+
+import DropdownButton from "react-bootstrap/DropdownButton";
+
+function Projects() {
+  // const [inpval, setInput] = useState({
+  // Interest: "",
+  //});
+
+  //const getdata = (e) => {
+  //const { value, name } = e.target;
+  //setInput(() => {
+  //   return {
+  //  ...inpval,
+  // [name]: value,
+  // };
+  //});
+  //};
+  //const addData = (e) => {
+  //e.preventDefault();
+  //console.log(addData);
+  //};
 
   return (
     <YourProjects>
@@ -40,24 +46,14 @@ function Projects() {
         </Avatar>
         <Detail>
           <Title>Multiple Choices</Title>
-
-          <Form.Group className="mb-3 col-lg-6" controlId="formBasicInterest">
-            <Form.Control
-              type="text"
-              name="Interest"
-              onChange={getdata}
-              placeholder=" "
-            ></Form.Control>
-          </Form.Group>
-          <Button
-            variant="primary"
-            className="col-lg-6"
-            onClick={addData}
-            style={{ background: "rgb(67,185,127)" }}
-            type="Submit"
-          >
-            Submit
-          </Button>
+          <DropdownButton id="dropdown-item-button" title="Submit">
+            <Dropdown.Item as="button">Sports</Dropdown.Item>
+            <Dropdown.Item as="button">Program Analysis</Dropdown.Item>
+            <Dropdown.Item as="button">Esports</Dropdown.Item>
+            <Dropdown.Item as="button">Singing</Dropdown.Item>
+            <Dropdown.Item as="button">Networking</Dropdown.Item>
+            <Dropdown.Item as="button">Government Jobs</Dropdown.Item>
+          </DropdownButton>
         </Detail>
       </Project>
     </YourProjects>
