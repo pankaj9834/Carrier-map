@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 import Review from "./Review";
 import Info from "./Info";
 import JoinWhatsapp from "./JoinWhatsapp";
-import ReviewByTeacher from "./Reviewer";
+import ReviewByTeacher from "./ReviewByTeacher";
 import Projects from "./Projects";
 import QuizResults from "./QuizResults";
 

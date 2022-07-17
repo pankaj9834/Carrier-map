@@ -1,9 +1,28 @@
-import React from "react";
 import styled from "styled-components";
 import AvatarImage4 from "../assets/avatarImage4.jpg";
 import { cardShadow, hoverEffect } from "../utils";
-
+import React, { useState } from "react";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
 function Projects() {
+  const [inpval, setInput] = useState({
+    Interest: "",
+  });
+
+  const getdata = (e) => {
+    const { value, name } = e.target;
+    setInput(() => {
+      return {
+        ...inpval,
+        [name]: value,
+      };
+    });
+  };
+  const addData = (e) => {
+    e.preventDefault();
+    console.log(addData);
+  };
+
   return (
     <YourProjects>
       <Project>
@@ -21,7 +40,24 @@ function Projects() {
         </Avatar>
         <Detail>
           <Title>Multiple Choices</Title>
-          <SubTitle>Cricket,Program training , Singing </SubTitle>
+
+          <Form.Group className="mb-3 col-lg-6" controlId="formBasicInterest">
+            <Form.Control
+              type="text"
+              name="Interest"
+              onChange={getdata}
+              placeholder=" "
+            ></Form.Control>
+          </Form.Group>
+          <Button
+            variant="primary"
+            className="col-lg-6"
+            onClick={addData}
+            style={{ background: "rgb(67,185,127)" }}
+            type="Submit"
+          >
+            Submit
+          </Button>
         </Detail>
       </Project>
     </YourProjects>
