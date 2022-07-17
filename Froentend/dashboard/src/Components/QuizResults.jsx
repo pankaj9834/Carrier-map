@@ -30,6 +30,7 @@ function QuizResults() {
             </Avatar>
             <TextContainer>
               <Title>Sehwag</Title>
+
               <SubTitle>Link of viedios</SubTitle>
             </TextContainer>
           </Info>
@@ -42,7 +43,19 @@ function QuizResults() {
     </QuizResultContainer>
   );
 }
+function inkViedios() {
+  return (
+    <CardContent flex={true}>
+      <Title>Ashish 33</Title>
 
+      <SubTitle>
+        <a href="https://web.whatsapp.com/">
+          <span>Join Now</span>
+        </a>
+      </SubTitle>
+    </CardContent>
+  );
+}
 const QuizResultContainer = styled.div`
   width: 35rem;
   border-radius: 1rem;
