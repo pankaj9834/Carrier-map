@@ -22,10 +22,13 @@ function ReviewByTeacher() {
         </Detail>
         <Title>Regarding Interest</Title>
         <ProjectInfo>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          <iframe
+            src="https://www.youtube.com/embed/E7wJTI-1dvQ"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+            title="video"
+          />{" "}
         </ProjectInfo>
       </CardContent>
     </TeacherReview>
@@ -34,9 +37,9 @@ function ReviewByTeacher() {
 
 const TeacherReview = styled.div`
   border-radius: 1rem;
-  height: 130%;
+  height: 170%;
   padding: 1rem;
-  background-color: white;
+  background-color: Green;
   width: 27.5vw;
   box-shadow: ${cardShadow};
   transition: 0.4s ease-in-out;

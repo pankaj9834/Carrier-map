@@ -2,7 +2,7 @@ import "./App.css";
 import styled from "styled-components";
 import Sidebar from "./Components/Sidebar";
 import MainContent from "./Components/MainContent";
-
+import LinkViedios from "./Components/LinkViedios";
 function App() {
   return (
     <Container>
