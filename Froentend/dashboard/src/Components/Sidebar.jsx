@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { RiContactsBook2Fill } from "react-icons/ri";
-import { SiGooglemeet } from "react-icons/si";
+
 import { FaWallet } from "react-icons/fa";
-import { AiFillProject, AiFillIdcard } from "react-icons/ai";
+import { AiFillProject, AiFillContacts } from "react-icons/ai";
 import Profiles from "./Profiles";
 import AvatarImage4 from "../assets/avatarImage4.jpg";
 
@@ -31,9 +31,12 @@ function Sidebar() {
           </Link>
           <Link></Link>
         </Links>
-        <ContactContainer>
-          <a href="#">Contact us </a>
-        </ContactContainer>
+        <Link>
+          <AiFillContacts />
+          <ContactContainer>
+            <h3>Contact US</h3>
+          </ContactContainer>
+        </Link>
       </LinksContainer>
     </Container>
   );
@@ -108,7 +111,10 @@ const Link = styled.li`
 `;
 
 const ContactContainer = styled.div`
-  width: 30%;
+  width: 50%;
+  gap: 1rem;
+  margin-left: 10%;
+  margin-bottom: 1rem;
   background-color: #0f4d92;
   color: #c4c4c4;
   height: 15%;
