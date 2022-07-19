@@ -29,15 +29,9 @@ function Sidebar() {
             <FaWallet />
             <h3>Payments</h3>
           </Link>
-          <Link>
-            <SiGooglemeet />
-            <h3>Online Meets With Experts</h3>
-          </Link>
+          <Link></Link>
         </Links>
         <ContactContainer>
-          <h5>
-            <span>Having troubles?</span>
-          </h5>
           <a href="#">Contact us </a>
         </ContactContainer>
       </LinksContainer>
@@ -56,6 +50,7 @@ const Container = styled.div`
   gap: 3rem;
   @media screen and (min-width: 320px) and (max-width: 1080px) {
     width: 100%;
+
     height: max-content !important;
   }
 `;
@@ -98,7 +93,7 @@ const Links = styled.ul`
 
 const Link = styled.li`
   margin-left: 10%;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   display: flex;
   gap: 1rem;
   color: #e4e4e4;
@@ -113,7 +108,7 @@ const Link = styled.li`
 `;
 
 const ContactContainer = styled.div`
-  width: 60%;
+  width: 30%;
   background-color: #0f4d92;
   color: #c4c4c4;
   height: 15%;

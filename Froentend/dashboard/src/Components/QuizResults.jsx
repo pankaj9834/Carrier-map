@@ -19,8 +19,9 @@ function QuizResults() {
             </TextContainer>
           </Info>
           <Container>
-            <Profiles content="View" paid />
-            {/* <Price>$ 1,200.87</Price> */}
+            <a href="https://www.youtube.com/watch?v=E8_CadfpZ_s">
+              <Profiles content="View" late />
+            </a>
           </Container>
         </QuizResult>
         <QuizResult>
@@ -29,14 +30,15 @@ function QuizResults() {
               <img src={AvatarImage4} alt="" />
             </Avatar>
             <TextContainer>
-              <Title>Sehwag</Title>
+              <Title>Interviews Hack</Title>
 
-              <SubTitle>Link of viedios</SubTitle>
+              <SubTitle>Click me to watch</SubTitle>
             </TextContainer>
           </Info>
           <Container>
-            <Profiles content="View" late />
-            {/* <Price>$ 1,200.87</Price> */}
+            <a href="https://www.youtube.com/watch?v=4Yc8YzSO7oM">
+              <Profiles content="View" late />
+            </a>
           </Container>
         </QuizResult>
       </CardContent>
