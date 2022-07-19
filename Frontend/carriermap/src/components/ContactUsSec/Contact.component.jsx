@@ -5,9 +5,7 @@ export const ContactContainer= styled.div`
   height:auto; 
   margin:15px 0px;
   text-align:center;
-  display:flex;
-  justify-content:center;
-  flex-flow:column;
+
 `; 
 
 export const Contacth1 = styled.h1`
@@ -21,8 +19,12 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 height:auto;
-max-width:1200px;
+margin-inline:auto;
 flex-wrap:wrap;
+@media (max-width:900px){
+  justify-content:center;
+align-items:center;
+} 
 `;   
 
 export const Contactp = styled.p`
