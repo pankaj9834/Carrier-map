@@ -2,8 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { RiContactsBook2Fill } from "react-icons/ri";
 
-import { FaWallet } from "react-icons/fa";
-import { AiFillProject, AiFillContacts } from "react-icons/ai";
+import { AiOutlineHome } from "react-icons/ai";
 import Profiles from "./Profiles";
 import AvatarImage4 from "../assets/avatarImage4.jpg";
 
@@ -21,22 +20,13 @@ function Sidebar() {
             <RiContactsBook2Fill />
             <h3>BTech in Computer Science </h3>
           </Link>
+
           <Link>
-            <AiFillProject />
-            <h3>Multiple Choices</h3>
+            <AiOutlineHome />
+
+            <h3>Adresses</h3>
           </Link>
-          <Link>
-            <FaWallet />
-            <h3>Payments</h3>
-          </Link>
-          <Link></Link>
         </Links>
-        <Link>
-          <AiFillContacts />
-          <ContactContainer>
-            <h3>Contact US</h3>
-          </ContactContainer>
-        </Link>
       </LinksContainer>
     </Container>
   );
@@ -50,7 +40,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3rem;
+  gap: 1rem;
   @media screen and (min-width: 320px) and (max-width: 1080px) {
     width: 100%;
 
@@ -64,6 +54,7 @@ const ProfileContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin: 10px;
 `;
 
 const Avatar = styled.img`
@@ -75,6 +66,7 @@ const Avatar = styled.img`
 const Name = styled.h1`
   color: white;
   font-size: 1.5rem;
+
   font-weight: 400;
   margin: 0.8rem 0 0.5rem 0;
 `;
@@ -107,30 +99,6 @@ const Link = styled.li`
   svg {
     font-size: 1.1rem;
     margin-top: 3%;
-  }
-`;
-
-const ContactContainer = styled.div`
-  width: 50%;
-  gap: 1rem;
-  margin-left: 10%;
-  margin-bottom: 1rem;
-  background-color: #0f4d92;
-  color: #c4c4c4;
-  height: 15%;
-  margin: auto auto;
-  border-radius: 1rem;
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-
-  a {
-    color: white;
-    text-decoration: none;
-  }
-
-  @media screen and (min-width: 320px) and (max-width: 1080px) {
-    margin-bottom: 2rem;
   }
 `;
 

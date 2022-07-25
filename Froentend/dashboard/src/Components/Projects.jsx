@@ -36,15 +36,6 @@ function Projects() {
           <img src={AvatarImage4} alt="" />
         </Avatar>
         <Detail>
-          <Title>Program Analysis</Title>
-          <SubTitle>1 day remaining</SubTitle>
-        </Detail>
-      </Project>
-      <Project>
-        <Avatar>
-          <img src={AvatarImage4} alt="" />
-        </Avatar>
-        <Detail>
           <Title>Multiple Choices</Title>
           <DropdownButton id="dropdown-item-button" title="Submit">
             <Dropdown.Item as="button">Sports</Dropdown.Item>
@@ -61,7 +52,7 @@ function Projects() {
 }
 
 const YourProjects = styled.div`
-  height: 70%;
+  height: 30%;
   background-color: white;
   margin: 0;
   padding: 1rem;
@@ -99,14 +90,7 @@ const Title = styled.h3`
     font-size: 1rem;
   }
 `;
-const SubTitle = styled.h5`
-  font-weight: 300;
-`;
+
 // eslint-disable-next-line no-unused-vars
-const AllProjects = styled.h5`
-  text-align: end;
-  color: green;
-  cursor: pointer;
-`;
 
 export default Projects;

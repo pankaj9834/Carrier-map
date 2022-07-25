@@ -6,32 +6,19 @@ function Info() {
   return (
     <InfoCard>
       <Card>
-        <CardContent>
-          <Row>
-            <Digit>5</Digit>
-            <InfoContainer>
-              <Title>Interest Guidance</Title>
-              <SubTitle>Classroom</SubTitle>
-            </InfoContainer>
-          </Row>
-        </CardContent>
-      </Card>
-      <Card>
-        <CardContent>
-          <Row>
-            <Digit>32</Digit>
-            <InfoContainer>
-              <Title>Multiple Interests</Title>
-            </InfoContainer>
-          </Row>
-        </CardContent>
+        <Row>
+          <Digit>32</Digit>
+          <InfoContainer>
+            <Title>Multiple Interests</Title>
+          </InfoContainer>
+        </Row>
       </Card>
     </InfoCard>
   );
 }
 
 const InfoCard = styled.div`
-  height: 100%;
+  height: 40%;
   width: 14rem;
   background-color: white;
   border-radius: 1rem;
@@ -51,10 +38,6 @@ const Card = styled.div`
   background-color: rgba(183, 194, 243, 0.3);
   border-radius: 1rem;
   margin-bottom: 1rem;
-`;
-
-const CardContent = styled.div`
-  padding: 0.7rem 1rem 0.3rem 1rem;
 `;
 
 const Row = styled.div`
@@ -79,10 +62,6 @@ const InfoContainer = styled.div`
 `;
 const Title = styled.h3`
   color: black;
-`;
-const SubTitle = styled.h5`
-  color: #333333;
-  font-weight: normal;
 `;
 
 export default Info;
