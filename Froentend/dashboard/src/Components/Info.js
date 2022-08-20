@@ -1,19 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 // import Badge from "./Badge";
 import { cardShadow, hoverEffect } from "../utils";
+
 function Info() {
   return (
-    <InfoCard>
-      <Card>
-        <Row>
-          <Digit>32</Digit>
-          <InfoContainer>
-            <Title>Multiple Interests</Title>
-          </InfoContainer>
-        </Row>
-      </Card>
-    </InfoCard>
+    <div>
+      <InfoCard>
+        <Card>
+          <Row>
+            <Digit>32</Digit>
+            <InfoContainer>
+              <Title>Multiple Interests</Title>
+            </InfoContainer>
+          </Row>
+        </Card>
+      </InfoCard>
+    </div>
   );
 }
 
