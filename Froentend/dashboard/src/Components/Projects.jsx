@@ -1,14 +1,19 @@
-import styled from "styled-components";
+import styled, { StyleSheetManager } from "styled-components";
 import AvatarImage4 from "../assets/avatarImage4.jpg";
 import { cardShadow, hoverEffect } from "../utils";
-//import React, { useState } from "react";
+import React, { useState } from "react";
 //import Form from "react-bootstrap/Form";
-//import Button from "react-bootstrap/Button";
+// import Button from "react-bootstrap/Button";
 
 //import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Dropdown from "react-bootstrap/Dropdown";
 
 import DropdownButton from "react-bootstrap/DropdownButton";
+import { useNavigate } from 'react-router-dom'
+
+
+
+
 
 function Projects() {
   // const [inpval, setInput] = useState({
@@ -27,8 +32,9 @@ function Projects() {
   //const addData = (e) => {
   //e.preventDefault();
   //console.log(addData);
-  //};
 
+  const navigate = useNavigate();
+ 
   return (
     <YourProjects>
       <Project>
@@ -47,12 +53,14 @@ function Projects() {
         <Detail>
           <Title>Multiple Choices</Title>
           <DropdownButton id="dropdown-item-button" title="Submit">
-            <Dropdown.Item as="button">Sports</Dropdown.Item>
-            <Dropdown.Item as="button">Program Analysis</Dropdown.Item>
-            <Dropdown.Item as="button">Esports</Dropdown.Item>
-            <Dropdown.Item as="button">Singing</Dropdown.Item>
-            <Dropdown.Item as="button">Networking</Dropdown.Item>
-            <Dropdown.Item as="button">Government Jobs</Dropdown.Item>
+            <DropdownMenu>
+            <Dropdown.Item as="Button" onClick={() => { navigate("/SportsPage")}}>Sports</Dropdown.Item>
+            <Dropdown.Item as="button" onClick={() => { navigate("/ProgramAnalysisPage")}}>Program Analysis</Dropdown.Item>
+            <Dropdown.Item as="button" onClick={() => { navigate("/EsportsPage")}}>Esports</Dropdown.Item>
+            <Dropdown.Item as="button" onClick={() => { navigate("/SingingPage")}}>Singing</Dropdown.Item>
+            <Dropdown.Item as="button" onClick={() => { navigate("/NetworkingPage")}}>Networking</Dropdown.Item>
+            <Dropdown.Item as="button" onClick={() => { navigate("/GovernmentJobPage")}}>Government Jobs</Dropdown.Item>
+            </DropdownMenu>
           </DropdownButton>
         </Detail>
       </Project>
@@ -108,5 +116,11 @@ const AllProjects = styled.h5`
   color: green;
   cursor: pointer;
 `;
+
+const DropdownMenu = styled.div`
+  flex: 1;
+  flex-direction: column;
+`
+
 
 export default Projects;

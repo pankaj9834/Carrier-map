@@ -8,6 +8,7 @@ import ReviewByTeacher from "./ReviewByTeacher";
 import Projects from "./Projects";
 import QuizResults from "./QuizResults";
 
+
 function MainContent() {
   return (
     <Container>
@@ -40,6 +41,7 @@ function MainContent() {
         </SectionTwo>
       </SubContainer>
     </Container>
+   
   );
 }
 
