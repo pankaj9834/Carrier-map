@@ -54,7 +54,7 @@ function Projects() {
           <Title>Multiple Choices</Title>
           <DropdownButton id="dropdown-item-button" title="Submit">
             <DropdownMenu>
-            <Dropdown.Item as="Button" onClick={() => { navigate("/SportsPage")}}>Sports</Dropdown.Item>
+            <Dropdown.Item as="button" onClick={() => { navigate("/SportsPage")}}>Sports</Dropdown.Item>
             <Dropdown.Item as="button" onClick={() => { navigate("/ProgramAnalysisPage")}}>Program Analysis</Dropdown.Item>
             <Dropdown.Item as="button" onClick={() => { navigate("/EsportsPage")}}>Esports</Dropdown.Item>
             <Dropdown.Item as="button" onClick={() => { navigate("/SingingPage")}}>Singing</Dropdown.Item>
