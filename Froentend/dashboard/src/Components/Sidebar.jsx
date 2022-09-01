@@ -46,7 +46,7 @@ function Sidebar() {
 }
 
 const Container = styled.div`
-  width: 100%;
+  /* width: 100%; */
   height: 100% !important;
   border-radius: 2rem;
   background-color: green;
@@ -55,7 +55,7 @@ const Container = styled.div`
   align-items: center;
   gap: 3rem;
   @media screen and (min-width: 320px) and (max-width: 1080px) {
-    width: 100%;
+    width: 350px;
     height: max-content !important;
   }
 `;

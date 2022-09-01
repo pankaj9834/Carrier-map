@@ -1,42 +1,19 @@
-import React from "react";
 import styled from "styled-components";
-// import Badge from "./Badge";
-import { cardShadow, hoverEffect } from "../utils";
-function Info() {
-  return (
-    <InfoCard>
-      <Card>
-        <CardContent>
-          <Row>
-            <Digit>5</Digit>
-            <InfoContainer>
-              <Title>Interest Guidance</Title>
-              <SubTitle>Classroom</SubTitle>
-            </InfoContainer>
-          </Row>
-        </CardContent>
-      </Card>
-      <Card>
-        <CardContent>
-          <Row>
-            <Digit>32</Digit>
-            <InfoContainer>
-              <Title>Multiple Interests</Title>
-            </InfoContainer>
-          </Row>
-        </CardContent>
-      </Card>
-    </InfoCard>
-  );
-}
+import { cardShadow, hoverEffect } from "../../utils";
 
+const Heading = styled.div`
+ align-items:center;
+ margin-left: 350px;
+ font-size: 50px;
+`;
 const InfoCard = styled.div`
   height: 100%;
-  width: fit-content;
+  width: 98ch;
   background-color: white;
   border-radius: 1rem;
   padding: 1rem;
   color: white;
+  align-items: center;
   box-shadow: ${cardShadow};
   transition: 0.4s ease-in-out;
   display: flex !important;
@@ -89,4 +66,4 @@ const SubTitle = styled.h5`
   font-weight: normal;
 `;
 
-export default Info;
+export {Heading, InfoCard, Card, CardContent, Row, Digit, InfoContainer, Title, SubTitle}
