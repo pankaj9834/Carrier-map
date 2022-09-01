@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 // import axios from 'axios'
-import { InfoCard, Card, CardContent, Row, Digit, InfoContainer, Title, Heading } from './pagesStyled';
+import { InfoCard, Card, CardContent, Row, InfoContainer, Title, Heading } from './pagesStyled';
 import Data from "../../assets/data.json"
 import sports from './dataController';
  
