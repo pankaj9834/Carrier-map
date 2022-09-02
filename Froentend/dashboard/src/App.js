@@ -1,14 +1,26 @@
 import "./App.css";
 import styled from "styled-components";
-import Sidebar from "./Components/Sidebar";
-import MainContent from "./Components/MainContent";
-import LinkViedios from "./Components/LinkViedios";
+import Dash from "./Components/Dash";
+
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import GovernmentJobPage from "./Components/GovernmentJobPage";
 function App() {
   return (
-    <Container>
-      <Sidebar />
-      <MainContent />
-    </Container>
+    /*<Container>
+      <Router>
+        <Sidebar />
+        <MainContent />
+        </Container>*/
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<Dash />} />
+        <Route
+          exact
+          path="/GovernmentJobPage"
+          element={<GovernmentJobPage />}
+        />
+      </Routes>
+    </Router>
   );
 }
 

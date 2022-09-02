@@ -40,12 +40,9 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
-  @media screen and (min-width: 320px) and (max-width: 1080px) {
-    width: 100%;
-
-    height: max-content !important;
-  }
+  gap: 8rem;
+  @media screen and (min-width: 320px) and (max-width: 1080px) width: 100%;
+  height: max-content !important;
 `;
 
 const ProfileContainer = styled.div`
@@ -82,13 +79,13 @@ const Links = styled.ul`
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  padding-top: 2rem;
-  height: 60%;
+  padding-top: 2 rem;
+  height: 100%;
 `;
 
 const Link = styled.li`
   margin-left: 10%;
-  margin-bottom: 1rem;
+  margin-bottom: 4rem;
   display: flex;
   gap: 1rem;
   color: #e4e4e4;

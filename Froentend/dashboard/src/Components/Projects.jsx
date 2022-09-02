@@ -1,13 +1,14 @@
 import styled from "styled-components";
 import AvatarImage4 from "../assets/avatarImage4.jpg";
 import { cardShadow, hoverEffect } from "../utils";
+
 //import React, { useState } from "react";
 //import Form from "react-bootstrap/Form";
 //import Button from "react-bootstrap/Button";
 
 //import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Dropdown from "react-bootstrap/Dropdown";
-
+import { useNavigate } from "react-router-dom";
 import DropdownButton from "react-bootstrap/DropdownButton";
 
 function Projects() {
@@ -28,7 +29,7 @@ function Projects() {
   //e.preventDefault();
   //console.log(addData);
   //};
-
+  const navigate = useNavigate();
   return (
     <YourProjects>
       <Project>
@@ -43,7 +44,14 @@ function Projects() {
             <Dropdown.Item as="button">Esports</Dropdown.Item>
             <Dropdown.Item as="button">Singing</Dropdown.Item>
             <Dropdown.Item as="button">Networking</Dropdown.Item>
-            <Dropdown.Item as="button">Government Jobs</Dropdown.Item>
+            <Dropdown.Item
+              as="button"
+              onClick={() => {
+                navigate("/GovernmentJobPage");
+              }}
+            >
+              GovernmentJobPage
+            </Dropdown.Item>
           </DropdownButton>
         </Detail>
       </Project>
@@ -62,11 +70,13 @@ const YourProjects = styled.div`
   &:hover {
     box-shadow: ${hoverEffect};
   }
-  @media screen and (min-width: 320px) and (max-width: 1080px) {
-    height: max-content;
-    width: 75%;
+  media only screen and (min-width : 992px) 
+    width: 50%;
+    @media screen and (min-width: 320px) and (max-width: 1080px) 
+    width: 100%;
+    height: max-content !important;
     margin-top: 1rem;
-  }
+  
 `;
 
 const Project = styled.div`

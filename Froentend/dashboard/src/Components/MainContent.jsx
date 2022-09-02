@@ -12,10 +12,12 @@ function MainContent() {
   return (
     <Container>
       <Navbar />
+
       <SubContainer>
         <SectionOne>
           <ColumnOne1>
             <Review />
+
             <Info />
           </ColumnOne1>
           <ColumnTwo1>

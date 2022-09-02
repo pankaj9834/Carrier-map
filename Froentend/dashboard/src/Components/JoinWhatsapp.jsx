@@ -36,12 +36,14 @@ const JoinChannel = styled.div`
   &:hover {
     box-shadow: ${hoverEffect};
   }
-  @media screen and (min-width: 320px) and (max-width: 1080px) {
+  @media only screen and (min-width: 768px) and (max-width: 1080px)
     margin-top: 2rem;
     margin-bottom: 2rem;
     height: max-content;
-    width: 80%;
-  }
+    width: 75%;
+    @media only screen and (min-width : 992px) 
+    width: 50%;
+
 `;
 
 const CardContent = styled.div`
