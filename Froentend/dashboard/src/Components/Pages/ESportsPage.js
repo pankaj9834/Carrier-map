@@ -5,13 +5,13 @@ const Types = React.lazy(() => import("./PageContent"))
  
 
 let Data = data.filter(function(v) {
-  return (v.type == "Esports");
+  return (v.type === "Esports");
 })  
 
 export class ESportsPage extends Component {
   render() {
     return (<PageContainer>
-      <Heading>ESportsPage</Heading>
+      <Heading>E-Sports Page</Heading>
       <InfoCard>
       <Suspense fallback={<div>Loading...</div>}>
       <Types Data={Data}/>
