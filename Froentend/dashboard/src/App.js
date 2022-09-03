@@ -10,15 +10,19 @@ import SingingPage from "./Components/Pages/SingingPage";
 import GovernmentJobPage from "./Components/Pages/GovernmentJobPage";
 import NetworkingPage from "./Components/Pages/NetworkingPage";
 import ProgramAnalysisPage from "./Components/Pages/ProgramAnalysisPage";
+import InterestPage from "./Components/Pages/InterestPage";
 import Sidebar from "./Components/Sidebar";
 
 function App() {
   return (
     <Router>
        <Container>
+      <div style={{justifyContent:"center", width: "20%", float:"left"}}>
     <Sidebar />
-    
+      </div>
+    <div style={{justifyContent:"center", width: "80%", float:"right"}}>
     <Routes>
+      
         <Route exact path='/'  element={<Home />} />
         <Route path='/SportsPage' element={<SportsPage />} />
         <Route path='/EsportsPage' element={<EsportsPage />} />
@@ -26,21 +30,30 @@ function App() {
         <Route path='/GovernmentJobPage' element={<GovernmentJobPage/>} />
         <Route path='/NetworkingPage' element={<NetworkingPage />} />
         <Route path='/ProgramAnalysisPage' element={<ProgramAnalysisPage />} />
+        <Route path='/Interests' element={<InterestPage />} />
     </Routes>
+    </div>
     </Container>
     </Router>
   );
 }
 
 const Container = styled.div`
-  display: flex;
   height: 97vh;
-  /* width:25ch; */
+  width: 100%;
   background: linear-gradient(to bottom right, white 0%, #e6e4ff 70%);
   border-radius: 2rem;
-  @media screen and (min-width: 320px) and (max-width: 1080px) {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  overflow-x: hidden;
+
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* flex-direction: row; */
+  /* @media screen and (min-width: 320px) and (max-width: 1080px) {
     flex-direction: column;
-  }
+  } */
 `;
 
 export default App;

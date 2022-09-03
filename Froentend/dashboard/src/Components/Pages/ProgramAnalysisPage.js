@@ -1,69 +1,28 @@
-import React, { Component } from 'react'
-// import axios from 'axios'
-import { InfoCard, Card, CardContent, Row, Digit, InfoContainer, Title, Heading } from './pagesStyled';
-import Data from "../../assets/data.json"
-import sports from './dataController';
+import React, { Component, Suspense } from 'react'
+import { InfoCard, Card, CardContent, Row, PageContainer, InfoContainer, Title, Heading } from './pagesStyled';
+import data from "../../assets/data.json"
+const Types = React.lazy(() => import("./PageContent"))
+
  
 
-  
+let Data = data.filter(function(v) {
+  return (v.type == "sports");
+})  
 
-export class SportsPage extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     sports: []
-  //   };
-  //   this.routerRef = React.createRef();
-  // }
-
-  // async componentDidMount() {
-  
-  //     const sports = await axios.get('api');
-  
-  //     this.setState({ sports: sports.data });
-  // }
-
-
-
+export class ProgramAnalysisPage extends Component {
   render() {
-    return (<div>
-      <Heading>SportsPage</Heading>
+    return (<PageContainer>
+      <Heading>ProgramAnalysisPage</Heading>
       <InfoCard>
-      <Types />
+      <Suspense fallback={<div>Loading...</div>}>
+      <Types Data={Data}/>
+      </Suspense>
     </InfoCard>
-    </div> 
+    </PageContainer> 
     )
   }
 }
 
-export default SportsPage
+export default ProgramAnalysisPage
 
-
-function Types() {
-  // const sports = data.sports.map((name, key) => (
-//  )
-   
-
-  return (
-    <div>
-             {
-             Data && Data.map(data => {
-              
-              return(
-                <Card>
-        <CardContent>
-          <Row>
-            <InfoContainer>
-                <Title className='box' key={data.id}>
-                  {data.name}
-                  </Title>
-                </InfoContainer>
-              </Row>
-            </CardContent>
-          </Card>
-              )
-             })}
-    </div>         
-  )
-}
 

@@ -1,8 +1,14 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 // import Badge from "./Badge";
 import { cardShadow, hoverEffect } from "../utils";
+
+
 function Info() {
+  const navigate = useNavigate();
+  const number  = useSelector((store) => store.interest.number)
   return (
     <InfoCard>
       <Card>
@@ -19,9 +25,9 @@ function Info() {
       <Card>
         <CardContent>
           <Row>
-            <Digit>32</Digit>
+            <Digit>{ number }</Digit>
             <InfoContainer>
-              <Title>Multiple Interests</Title>
+              <Title onClick={() => { navigate("/Interests")}}>Interests</Title>
             </InfoContainer>
           </Row>
         </CardContent>
@@ -83,6 +89,9 @@ const InfoContainer = styled.div`
 `;
 const Title = styled.h3`
   color: black;
+  &:hover{
+    cursor: pointer;
+  }
 `;
 const SubTitle = styled.h5`
   color: #333333;

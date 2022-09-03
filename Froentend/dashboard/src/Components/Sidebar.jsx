@@ -6,12 +6,14 @@ import { FaWallet } from "react-icons/fa";
 import { AiFillProject, AiFillIdcard } from "react-icons/ai";
 import Profiles from "./Profiles";
 import AvatarImage4 from "../assets/avatarImage4.jpg";
+import { useNavigate } from "react-router-dom";
 
 function Sidebar() {
+  const navigate = useNavigate();
   return (
     <Container>
       <ProfileContainer>
-        <Avatar src={AvatarImage4} />
+        <Avatar src={AvatarImage4} onClick={() => { navigate("/")}}/>
         <Name>Ashish Srivastav</Name>
         <Profiles content="Profile" />
       </ProfileContainer>
@@ -23,7 +25,7 @@ function Sidebar() {
           </Link>
           <Link>
             <AiFillProject />
-            <h3>Multiple Choices</h3>
+            <span onClick={() => { navigate("/Interests")}}>Your Interests</span>
           </Link>
           <Link>
             <FaWallet />
@@ -54,6 +56,11 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 3rem;
+  z-index: 1; 
+  top: 0; 
+  position: relative;
+  float: left;
+  left: 0 !important;
   @media screen and (min-width: 320px) and (max-width: 1080px) {
     width: 350px;
     height: max-content !important;
@@ -76,9 +83,13 @@ const Avatar = styled.img`
 
 const Name = styled.h1`
   color: white;
+  width: 20ch;
   font-size: 1.5rem;
   font-weight: 400;
-  margin: 0.8rem 0 0.5rem 0;
+  margin: 0.8rem 0 0.5rem 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 `;
 
 const LinksContainer = styled.div`

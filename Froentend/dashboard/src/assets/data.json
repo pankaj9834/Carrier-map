@@ -1,28 +1,60 @@
 
 [ {
       "id": 1,
+      "type": "sports",
       "name": "Cricket"
     },
     {
       "id": 2,
+      "type": "sports",
       "name": "Foot Ball"
     },
     {
       "id": 3,
+      "type": "sports",
       "name": "Volley Ball"
     },
     {
       "id": 4,
+      "type": "sports",
       "name": "Kabadi"
     },
     {
       "id": 5,
+      "type": "sports",
       "name": "Chess"
     },
     {
       "id": 6,
+      "type": "sports",
+      "name": "Basket Ball"
+    },
+    {
+      "id": 7,
+      "type": "government",
       "name": "Basket Ball"
     }
-
+    ,
+    {
+      "id": 8,
+      "type": "Esports",
+      "name": "Unreal Engine"
+    }
+    ,
+    {
+      "id": 9,
+      "type": "Esports",
+      "name": "Unity"
+    },
+    {
+      "id": 10,
+      "type": "Esports",
+      "name": "Amazon Game Engine"
+    },
+    {
+      "id": 11,
+      "type": "Esports",
+      "name": "CryEngine"
+    }
 
   ]

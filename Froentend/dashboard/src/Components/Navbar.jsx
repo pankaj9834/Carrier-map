@@ -19,10 +19,10 @@ const NavbarContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10%;
   @media screen and (min-width: 320px) and (max-width: 1080px) {
     flex-direction: column;
     margin-bottom: 1rem;
+    position: fixed !important;
   }
 `;
 
