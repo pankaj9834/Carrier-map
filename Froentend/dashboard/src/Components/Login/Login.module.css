@@ -6,12 +6,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (min-width: 320px) and (max-width: 1080px) width: 100%;
 }
 
 .innerBox {
   min-width: 480px;
-  height: fit-content;
-  width: fit-content;
+  /* height: fit-content;*/
+  /* width: fit-content;*/
   background-color: #fff;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
   padding: 30px;
@@ -19,12 +20,14 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+  @media screen and (min-width: 100px) and (max-width: 450px) width: 100%;
 }
 
 .footer {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  @media screen and (min-width: 320px) and (max-width: 1080px) width: 100%;
 }
 
 .footer .error {
@@ -32,6 +35,7 @@
   font-size: 0.875rem;
   color: #ff3300;
   text-align: center;
+  @media screen and (min-width: 320px) and (max-width: 1080px) width: 100%;
 }
 
 .footer button {
@@ -46,6 +50,7 @@
   width: 100%;
   transition: 100ms;
   cursor: pointer;
+  @media screen and (min-width: 320px) and (max-width: 1080px) width: 100%;
 }
 
 .footer button:disabled {

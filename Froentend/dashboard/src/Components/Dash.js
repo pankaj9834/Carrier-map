@@ -9,30 +9,12 @@ function Dash(props) {
   return (
     <React.Fragment>
       <div>
-        <Container>
-          <Suspense fallback={<div>Wait We are Working...</div>}>
+        <Suspense fallback={<div>....Loading Please Wait...</div>}>
+          <Container>
             <Sidebar />
-          </Suspense>
-          <MainContent />
-        </Container>
-      </div>
-      ;
-      <div>
-        <div>
-          <h1>
-            <Link to="/login">Login</Link>
-          </h1>
-          <br />
-          <h1>
-            <Link to="/signup">SignUp</Link>
-          </h1>
-        </div>
-
-        <br />
-        <br />
-        <br />
-
-        <h2>{props.name ? `Welcome - ${props.name}` : "Login please"}</h2>
+            <MainContent />
+          </Container>
+        </Suspense>
       </div>
     </React.Fragment>
   );
