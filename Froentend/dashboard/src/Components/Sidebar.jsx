@@ -10,9 +10,13 @@ function Sidebar() {
   return (
     <Container>
       <ProfileContainer>
-        <Avatar src={AvatarImage4} />
-        <Name>Ashish Srivastav</Name>
-        <Profiles content="Profile" />
+        <div>
+          <Avatar src={AvatarImage4} />
+          <Name>Ashish Srivastav</Name>
+        </div>
+        <div>
+          <Profiles content="Profile" />
+        </div>
       </ProfileContainer>
       <LinksContainer>
         <Links>
@@ -63,7 +67,6 @@ const Avatar = styled.img`
 const Name = styled.h1`
   color: white;
   font-size: 1.5rem;
-
   font-weight: 400;
   margin: 0.8rem 0 0.5rem 0;
 `;

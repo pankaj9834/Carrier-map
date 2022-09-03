@@ -39,11 +39,46 @@ function Projects() {
         <Detail>
           <Title>Multiple Choices</Title>
           <DropdownButton id="dropdown-item-button" title="Submit">
-            <Dropdown.Item as="button">Sports</Dropdown.Item>
-            <Dropdown.Item as="button">Program Analysis</Dropdown.Item>
-            <Dropdown.Item as="button">Esports</Dropdown.Item>
-            <Dropdown.Item as="button">Singing</Dropdown.Item>
-            <Dropdown.Item as="button">Networking</Dropdown.Item>
+            <Dropdown.Item
+              as="button"
+              onClick={() => {
+                navigate("/Sports");
+              }}
+            >
+              Sports
+            </Dropdown.Item>
+            <Dropdown.Item
+              as="button"
+              onClick={() => {
+                navigate("/ProgramAnalysis");
+              }}
+            >
+              Program Analysis
+            </Dropdown.Item>
+            <Dropdown.Item
+              as="button"
+              onClick={() => {
+                navigate("/Esports");
+              }}
+            >
+              Esports
+            </Dropdown.Item>
+            <Dropdown.Item
+              as="button"
+              onClick={() => {
+                navigate("/Singing");
+              }}
+            >
+              Singing
+            </Dropdown.Item>
+            <Dropdown.Item
+              as="button"
+              onClick={() => {
+                navigate("/Networking");
+              }}
+            >
+              Networking
+            </Dropdown.Item>
             <Dropdown.Item
               as="button"
               onClick={() => {

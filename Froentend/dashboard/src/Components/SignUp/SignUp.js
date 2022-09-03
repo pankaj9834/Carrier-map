@@ -7,9 +7,8 @@ import { auth } from "../../firebase";
 
 import styles from "./SignUp.module.css";
 
-function Signup() {
+function SignUp() {
   const navigate = useNavigate();
-
   const [values, setValues] = useState({
     name: "",
     email: "",
@@ -85,4 +84,4 @@ function Signup() {
   );
 }
 
-export default Signup;
+export default SignUp;
