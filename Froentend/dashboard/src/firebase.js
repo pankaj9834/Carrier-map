@@ -2,13 +2,14 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB896pvCZwGVU5RUIWBIVzUAtTllNAu0n8",
-  authDomain: "fir-auth-1132.firebaseapp.com",
-  projectId: "fir-auth-1132",
-  storageBucket: "fir-auth-1132.appspot.com",
-  messagingSenderId: "1029021654707",
-  appId: "1:1029021654707:web:14aa4dee98449061701ac6",
-  measurementId: "G-MFP6M081T7",
+  apiKey: "AIzaSyCIWqjNiiAhpBD0Yju_GmC6S9iItaJuh70",
+  authDomain: "carrier-17378.firebaseapp.com",
+  databaseURL: "https://carrier-17378-default-rtdb.firebaseio.com",
+  projectId: "carrier-17378",
+  storageBucket: "carrier-17378.appspot.com",
+  messagingSenderId: "673297257723",
+  appId: "1:673297257723:web:9b9e0bf72e610db6a98c5e",
+  measurementId: "G-63BBC8HBSV",
 };
 
 const app = initializeApp(firebaseConfig);

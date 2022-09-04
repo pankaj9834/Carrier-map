@@ -5,6 +5,7 @@ import React, { Suspense } from "react";
 import { Link } from "react-router-dom";
 
 const Sidebar = React.lazy(() => import("../Components/Sidebar"));
+
 function Dash(props) {
   return (
     <React.Fragment>
