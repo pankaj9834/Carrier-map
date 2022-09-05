@@ -1,8 +1,8 @@
 import "./App.css";
 import styled from "styled-components";
 
-import React from 'react'
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import React, { useEffect }from 'react'
+import { Route, BrowserRouter as Router, Routes, Navigate } from "react-router-dom";
 import Home from "./Components/Home";
 import SportsPage from "./Components/Pages/SportsPage";
 import EsportsPage from "./Components/Pages/ESportsPage";
@@ -12,17 +12,64 @@ import NetworkingPage from "./Components/Pages/NetworkingPage";
 import ProgramAnalysisPage from "./Components/Pages/ProgramAnalysisPage";
 import InterestPage from "./Components/Pages/InterestPage";
 import Sidebar from "./Components/Sidebar";
+import Signup from "./Components/Auth/Signup";
+import { useDispatch, useSelector } from 'react-redux';
+import { login, logout, selectUser } from "./Components/ReduxSlice/interestSlice"
+import { auth, onAuthStateChanged } from './firebase';
+import Login from "./Components/Auth/Login";
+
+
+
+
 
 function App() {
+  const user = useSelector(selectUser);
+const dispatch = useDispatch();
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (userAuth) => {
+      if (userAuth) {
+        // user is logged in, send the user's details to redux, store the current user in the state
+        dispatch(
+          login({
+            email: userAuth.email,
+            uid: userAuth.uid,
+            displayName: userAuth.displayName,
+            photoUrl: userAuth.photoURL,
+          })
+        );
+      } else {
+        dispatch(logout());
+      }
+    });
+  }, []);
+  
   return (
     <Router>
-       <Container>
+      {!user ? (
+        // display the login form 
+        <div style={{maxHieght:"100vh"}}>
+        
+        <Routes>
+        <Route  path='/Login'  element={<Login />} />
+          <Route  path='/Signup'  element={<Signup />} />
+          <Route path="/" element={ <Navigate to="/Login" />} /> 
+        </Routes>
+        </div>
+       
+        
+      ) : (
+        // display the rest of the app
+        <div className='app__body'>
+          {/* Rest of the app */}
+          <Container>
+      
       <div style={{justifyContent:"center", width: "20%", float:"left"}}>
     <Sidebar />
       </div>
     <div style={{justifyContent:"center", width: "80%", float:"right"}}>
     <Routes>
-      
+    <Route path="/Login" element={ <Navigate to="/" />} />
         <Route exact path='/'  element={<Home />} />
         <Route path='/SportsPage' element={<SportsPage />} />
         <Route path='/EsportsPage' element={<EsportsPage />} />
@@ -34,6 +81,9 @@ function App() {
     </Routes>
     </div>
     </Container>
+        </div>
+      )}
+       
     </Router>
   );
 }

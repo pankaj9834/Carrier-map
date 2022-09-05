@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import interestReducer from './Components/interstSlice';
+import interestReducer from './Components/ReduxSlice/interestSlice';
 
 export const store = configureStore({
   reducer: {

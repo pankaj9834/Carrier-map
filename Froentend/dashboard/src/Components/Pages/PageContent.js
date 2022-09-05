@@ -1,7 +1,7 @@
 import { Card, CardContent, Row, ButtonHolder, InfoContainer, Title } from './pagesStyled';
 import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
-import { removeItem, addItem } from '../interstSlice';
+import { removeItem, addItem } from '../ReduxSlice/interestSlice';
 import { useDispatch } from 'react-redux';
 
 export default function Types(props) {

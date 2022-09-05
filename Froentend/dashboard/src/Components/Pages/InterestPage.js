@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import { PageContainer, Heading, InfoCard, Title, InterestFooter } from './pagesStyled'
 import Button from 'react-bootstrap/Button';
-import { clearInterests } from '../interstSlice'
+import { clearInterests } from '../ReduxSlice/interestSlice'
 const Types = React.lazy(() => import("./PageContent"))
 // const Data = interestItems;
 const  InterestPage = () => {

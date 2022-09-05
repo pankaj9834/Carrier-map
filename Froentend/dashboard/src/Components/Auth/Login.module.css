@@ -1,0 +1,139 @@
+.container {
+   height: fit-content;
+   min-height: 97vh;
+   max-height: fit-content;
+   width: 100%;
+   background: linear-gradient(to right, Green, rgb(120, 204, 120));
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   @media screen and (min-width: 320px) and (max-width: 1080px) width: 100%;
+ }
+ .mainHeading {
+  color: white;
+  font-size: 70px;
+
+ }
+ .innerBox {
+   min-width: 480px;
+   height: fit-content;
+   /* width: fit-content;*/
+   background-color: #fff;
+   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+   padding: 30px;
+   border-radius: 10px;
+   display: flex;
+   flex-direction: column;
+   gap: 30px;
+   @media screen and (min-width: 100px) and (max-width: 450px) width: 100%;
+ }
+ .formContainer {
+  display: flex;
+  flex-direction: column;
+  max-height: fit-content !important;
+ }
+ .inputDiv {
+  justify-content: center;
+  width: max-content;
+  width: 100%;
+  margin-bottom: 5%;
+  height: 5%;
+ }
+ .inputField {
+  width: 100%;
+  border-color: white white blue white;
+  height:  4vh;
+  /* border-radius: 10%; */
+  background-color: white;
+  /* outline-offset: 0ch;
+  outline-width: 0ch; */
+  box-sizing: border-box;
+  border-radius: 20px;
+  padding: 10px;
+  border: 1px solid;
+ }
+ .inputField :focus {
+  outline: 0;
+  border-color: green;
+ }
+ .footer {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   height: fit-content;
+   @media screen and (min-width: 320px) and (max-width: 1080px) width: 100%;
+ }
+ 
+ .footer .error {
+   font-weight: bold;
+   font-size: 0.875rem;
+   color: #ff3300;
+   text-align: center;
+   @media screen and (min-width: 320px) and (max-width: 1080px) width: 100%;
+ }
+ 
+ .inputDiv button {
+   outline: none;
+   border: none;
+   background-color: Green;
+   color: #fff;
+   border-radius: 5px;
+   font-weight: bold;
+   font-size: 1rem;
+   padding: 10px 16px;
+   width: 100%;
+   transition: 100ms;
+   cursor: pointer;
+   @media screen and (min-width: 320px) and (max-width: 1080px) width: 100%;
+ }
+ 
+ .footer button:disabled {
+   background-color: gray !important;
+ }
+ 
+ .inputDiv button :hover {
+   background-color: Green;
+ }
+ 
+ .footer p {
+   font-weight: 700;
+   color: #000;
+   height: fit-content;
+ }
+ 
+ .footer p span a {
+   font-weight: bold;
+   color: Green;
+   letter-spacing: 1px;
+   font-size: 1rem;
+   text-decoration: none;
+ }
+ 
+ .containerLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.containerLabel label {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #313131;
+}
+
+.containerLabel input {
+  border-radius: 5px;
+  border: 1px solid #dddddd;
+  outline: none;
+  padding: 10px 15px;
+  color: #000;
+}
+
+.containerLabel input:hover {
+  border-color: #ccc;
+}
+
+.containerLabel input:focus {
+  border-color: #9900ff;
+}

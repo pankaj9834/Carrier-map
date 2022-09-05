@@ -7,14 +7,17 @@ import { AiFillProject, AiFillIdcard } from "react-icons/ai";
 import Profiles from "./Profiles";
 import AvatarImage4 from "../assets/avatarImage4.jpg";
 import { useNavigate } from "react-router-dom";
+import LogOut from "./Auth/LogOut";
+import { useSelector } from "react-redux";
 
 function Sidebar() {
   const navigate = useNavigate();
+  const displayName  = useSelector((store) => store.interest.user.displayName)
   return (
     <Container>
       <ProfileContainer>
         <Avatar src={AvatarImage4} onClick={() => { navigate("/")}}/>
-        <Name>Ashish Srivastav</Name>
+        <Name>{displayName}</Name>
         <Profiles content="Profile" />
       </ProfileContainer>
       <LinksContainer>
@@ -43,6 +46,7 @@ function Sidebar() {
           <a href="#">Contact us </a>
         </ContactContainer>
       </LinksContainer>
+      <LogOut />
     </Container>
   );
 }

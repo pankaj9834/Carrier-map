@@ -1,10 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
-import interestItems from '../assets/interests';
+
 const initialState = {
+  user: null,
   interestItems: [],
   number:0,
   isLoading: true,
-  buttonTogle: true
+  buttonToggle: true
 };
 
 const interestSlice = createSlice({
@@ -32,7 +33,15 @@ const interestSlice = createSlice({
         state.interestItems.push(temp)
         state.number = state.number + 1
       }
-    }
+    },
+    login: (state, action) => {
+      state.user = action.payload;
+    },
+    logout: (state) => {
+      state.user = null;
+      state.interestItems = [];
+      state.number = 0;
+    },
       
       
       
@@ -43,4 +52,5 @@ const interestSlice = createSlice({
 // console.log(cartSlice);
 
 export default interestSlice.reducer;
-export const{ clearInterests, removeItem, addItem } = interestSlice.actions
+export const{ clearInterests, removeItem, addItem, login, logout } = interestSlice.actions
+export const selectUser = (state) => state.interest.user;
