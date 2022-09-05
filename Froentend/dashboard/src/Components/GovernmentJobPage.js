@@ -12,6 +12,7 @@ function GovernmentJobPage() {
       )
       .then((response) => {
         setData(response.data.articles);
+        console.log(response);
       });
   };
   return (
@@ -26,7 +27,7 @@ function GovernmentJobPage() {
         <div className="row">
           {data.map((value) => {
             return (
-              <Card style={{ width: "15rem" }}>
+              <Card style={{ width: "18rem" }}>
                 <Card.Img variant="top" src={value.urlToImage} />
                 <Card.Body>
                   <Card.Title>{value.title}</Card.Title>

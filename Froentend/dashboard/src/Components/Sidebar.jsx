@@ -44,7 +44,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8rem;
+  gap: 3rem;
   @media screen and (min-width: 320px) and (max-width: 1080px) width: 100%;
   height: max-content !important;
 `;
@@ -55,7 +55,7 @@ const ProfileContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 10px;
+  margin: 5px;
 `;
 
 const Avatar = styled.img`

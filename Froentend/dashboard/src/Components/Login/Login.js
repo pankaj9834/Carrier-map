@@ -25,8 +25,7 @@ function Login() {
 
     setSubmitButtonDisabled(true);
     signInWithEmailAndPassword(auth, values.email, values.pass)
-      .then((userCredential) => {
-        const user = userCredential.user;
+      .then(async (res) => {
         setSubmitButtonDisabled(false);
 
         navigate("/");
