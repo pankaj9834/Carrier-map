@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { PageContainer, Heading, InfoCard, Title, InterestFooter } from './pagesStyled'
 import Button from 'react-bootstrap/Button';
 import { clearInterests } from '../ReduxSlice/interestSlice'
-const InterestTypes = React.lazy(() => import("./contentLoader/InterestCondent"))
+const Types = React.lazy(() => import("./contentLoader/interestsLoader"))
 // const Data = interestItems;
 const  InterestPage = () => {
    
@@ -20,7 +20,6 @@ const  InterestPage = () => {
 }
 
 export default InterestPage 
-
 const InterestContainer = () => { 
    const {interestItems, number} = useSelector((store) => store.interest );
    const Data = interestItems
@@ -29,7 +28,7 @@ const InterestContainer = () => {
       
       return<div style={{alignItems:"center", top:"50%"}}>
          <InfoCard style={{height:"70vh"}}>
-         <span style={{color:"black", justifyContent:"center", position:"absolute", verticalAlign:"middle", alignItems:"center", zindex:1}}>Your cart is empty</span>
+         <span style={{color:"black", justifyContent:"center", position:"absolute", verticalAlign:"middle", alignItems:"center", zIndex:1}}>You have currently no interests...</span>
          </InfoCard>
          
       </div>
@@ -42,7 +41,7 @@ return <>
 
    <InfoCard>
     <Suspense fallback={<div>Loading...</div>}>
-     <InterestTypes Data={Data}/>
+     <Types Data={Data}/>
     </Suspense> 
     <InterestFooter>
     {/* <span style={{color:"black", verticalAlign:"middle", alignItems:"center", zindex:1}}>Footer</span> */}

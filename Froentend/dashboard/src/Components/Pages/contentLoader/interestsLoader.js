@@ -1,10 +1,10 @@
-import { Card, CardContent, Row, ButtonHolder, InfoContainer, Title } from './pagesStyled';
+import { Card, CardContent, Row, ButtonHolder, InfoContainer, Title } from '../pagesStyled';
 import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
-import { removeItem, addItem } from '../ReduxSlice/interestSlice';
+import { removeItem, addItem } from '../../ReduxSlice/interestSlice';
 import { useDispatch } from 'react-redux';
 
-export default function InterestTypes(props) {
+export default function Types(props) {
   const dispatch = useDispatch();
 
   const [isHovering, setIsHovering] = useState(false);
@@ -16,7 +16,9 @@ export default function InterestTypes(props) {
     setIsHovering(false);
   };
 
-  
+  const handleClick = (data) =>{
+     dispatch(addItem(data))
+  }
 
    return (
      <div>
@@ -32,7 +34,6 @@ export default function InterestTypes(props) {
                    {data.name}
                    </Title>
                    <ButtonHolder>
-                   
                    <Button  style={{
                      backgroundColor: isHovering ? 'rgba(183, 194, 243, 0.3)' : '',
                      color: isHovering ? '#0f4d92' : '',
@@ -44,6 +45,7 @@ export default function InterestTypes(props) {
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave} onClick={()=>{dispatch(removeItem(data.id))}}>Remove</Button>
                     </ButtonHolder>
+                    
                     
                     {/* </InfoContainer>
                     </Row>

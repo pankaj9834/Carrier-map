@@ -28,7 +28,7 @@ function Sidebar() {
           </Link>
           <Link>
             <AiFillProject />
-            <span onClick={() => { navigate("/Interests")}}>Your Interests</span>
+            <span onClick={() => { navigate("/InterestPage")}}>Your Interests</span>
           </Link>
           <Link>
             <FaWallet />

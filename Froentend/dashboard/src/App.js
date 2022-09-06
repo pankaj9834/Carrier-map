@@ -107,7 +107,7 @@ const dispatch = useDispatch();
         <Route path='/ProgramAnalysisPage' element={<Suspense fallback={<div>Loading...</div>}>
         <ProgramAnalysisPage />
         </Suspense>} />
-        <Route path='/InterestsPage' element={<Suspense fallback={<div>Loading...</div>}>
+        <Route path='/InterestPage' element={<Suspense fallback={<div>Loading...</div>}>
         <InterestPage />
         </Suspense>} />
         

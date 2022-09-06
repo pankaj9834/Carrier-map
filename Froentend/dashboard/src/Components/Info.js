@@ -27,7 +27,7 @@ function Info() {
           <Row>
             <Digit>{ number }</Digit>
             <InfoContainer>
-              <Title onClick={() => { navigate("/Interests")}}>Interests</Title>
+              <Title onClick={() => { navigate("/InterestPage")}}>Interests</Title>
             </InfoContainer>
           </Row>
         </CardContent>
