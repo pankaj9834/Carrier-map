@@ -43,7 +43,7 @@ function QuizResults() {
     </QuizResultContainer>
   );
 }
-function inkViedios() {
+function linkVideos() {
   return (
     <CardContent flex={true}>
       <Title>Ashish 33</Title>
@@ -61,7 +61,7 @@ const QuizResultContainer = styled.div`
   border-radius: 1rem;
   margin-top: 1rem;
   background-color: grey;
-  height: 155%;
+  height: fit-content;
   box-shadow: ${cardShadow};
   transition: 0.4s ease-in-out;
   &:hover {

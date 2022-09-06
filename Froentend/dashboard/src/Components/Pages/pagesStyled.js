@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { cardShadow, hoverEffect } from "../../utils";
 
 const Heading = styled.div`
+margin-top: 50px;
  align-items:center;
  margin-right: 20px;
  margin-left: 10px;
@@ -102,10 +103,12 @@ const SubTitle = styled.h5`
   font-weight: normal;
 `;
 const PageContainer = styled.div`
+  width: 100%;
+  /* margin: 50 50; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start ;
 `
  const InterestFooter = styled.div`
  height: fit-content;

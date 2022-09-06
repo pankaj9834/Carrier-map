@@ -9,15 +9,15 @@ import {
 import { useDispatch } from 'react-redux';
 import { login } from '../ReduxSlice/interestSlice';
 import { Link, useNavigate } from 'react-router-dom';
-import styles from "./Login.module.css";
+import styles from "./Auth.module.css";
 
 function Login() {
   
 // use state constants for the the form inputs
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [name, setName] = useState('');
-  const [profilePic, setProfilePic] = useState('');
+  // const [name, setName] = useState('');
+  // const [profilePic, setProfilePic] = useState('');
   const dispatch = useDispatch();
   const [errorMsg, setErrorMsg] = useState("");
 
@@ -78,7 +78,7 @@ function Login() {
           <div className={styles.inputDiv} >
             
         <button type='submit' onClick={loginToApp}>
-          Sign In
+          Log In
         </button>
           </div>
 

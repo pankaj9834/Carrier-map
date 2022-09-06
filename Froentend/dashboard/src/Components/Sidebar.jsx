@@ -87,13 +87,14 @@ const Avatar = styled.img`
 
 const Name = styled.h1`
   color: white;
-  width: 20ch;
+  width: 100%;
   font-size: 1.5rem;
   font-weight: 400;
-  margin: 0.8rem 0 0.5rem 50px;
+  /* margin: 0.8rem 0 0.5rem 50px; */
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 `;
 
 const LinksContainer = styled.div`
@@ -137,7 +138,7 @@ const ContactContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 1rem;
-
+  align-items: center;
   a {
     color: white;
     text-decoration: none;

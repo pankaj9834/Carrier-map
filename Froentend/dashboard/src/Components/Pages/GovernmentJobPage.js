@@ -1,7 +1,7 @@
 import React, { Component, Suspense } from 'react'
 import { InfoCard, PageContainer, Heading } from './pagesStyled';
 import data from "../../assets/data.json"
-const Types = React.lazy(() => import("./PageContent"))
+const Types = React.lazy(() => import("./contentLoader/contentLoader"))
  
 
 let Data = data.filter(function(v) {

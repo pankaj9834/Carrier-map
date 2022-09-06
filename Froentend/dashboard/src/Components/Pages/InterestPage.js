@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { PageContainer, Heading, InfoCard, Title, InterestFooter } from './pagesStyled'
 import Button from 'react-bootstrap/Button';
 import { clearInterests } from '../ReduxSlice/interestSlice'
-const Types = React.lazy(() => import("./PageContent"))
+const InterestTypes = React.lazy(() => import("./contentLoader/InterestCondent"))
 // const Data = interestItems;
 const  InterestPage = () => {
    
@@ -42,7 +42,7 @@ return <>
 
    <InfoCard>
     <Suspense fallback={<div>Loading...</div>}>
-     <Types Data={Data}/>
+     <InterestTypes Data={Data}/>
     </Suspense> 
     <InterestFooter>
     {/* <span style={{color:"black", verticalAlign:"middle", alignItems:"center", zindex:1}}>Footer</span> */}

@@ -37,7 +37,8 @@ function Info() {
 }
 
 const InfoCard = styled.div`
-  height: 100%;
+height: fit-content;
+  min-height: fit-content;
   width: fit-content;
   background-color: white;
   border-radius: 1rem;
@@ -80,7 +81,7 @@ const Row = styled.div`
 const Digit = styled.div`
   background-color: green;
   padding: 0.8rem 1rem;
-  font-size: 1.3rem;
+  font-size: 25;
   border-radius: 1rem;
 `;
 const InfoContainer = styled.div`

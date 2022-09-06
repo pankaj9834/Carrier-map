@@ -1,23 +1,34 @@
 import "./App.css";
 import styled from "styled-components";
 
-import React, { useEffect }from 'react'
+import React, { useEffect, Suspense }from 'react'
 import { Route, BrowserRouter as Router, Routes, Navigate } from "react-router-dom";
-import Home from "./Components/Home";
-import SportsPage from "./Components/Pages/SportsPage";
-import EsportsPage from "./Components/Pages/ESportsPage";
-import SingingPage from "./Components/Pages/SingingPage";
-import GovernmentJobPage from "./Components/Pages/GovernmentJobPage";
-import NetworkingPage from "./Components/Pages/NetworkingPage";
-import ProgramAnalysisPage from "./Components/Pages/ProgramAnalysisPage";
-import InterestPage from "./Components/Pages/InterestPage";
+// import SportsPage from "./Components/Pages/SportsPage";
+// import EsportsPage from "./Components/Pages/ESportsPage";
+// import SingingPage from "./Components/Pages/SingingPage";
+// import GovernmentJobPage from "./Components/Pages/GovernmentJobPage";
+// import NetworkingPage from "./Components/Pages/NetworkingPage";
+// import ProgramAnalysisPage from "./Components/Pages/ProgramAnalysisPage";
+// import InterestPage from "./Components/Pages/InterestPage";
 import Sidebar from "./Components/Sidebar";
-import Signup from "./Components/Auth/Signup";
+// import Signup from "./Components/Auth/Signup";
 import { useDispatch, useSelector } from 'react-redux';
 import { login, logout, selectUser } from "./Components/ReduxSlice/interestSlice"
 import { auth, onAuthStateChanged } from './firebase';
-import Login from "./Components/Auth/Login";
+// import Login from "./Components/Auth/Login";
+// import MainContent from "./Components/MainContent";
 
+const SportsPage = React.lazy(() => import("./Components/Pages/SportsPage"))
+const EsportsPage = React.lazy(() => import("./Components/Pages/ESportsPage"))
+const SingingPage = React.lazy(() => import("./Components/Pages/SingingPage"))
+const GovernmentJobPage = React.lazy(() => import("./Components/Pages/GovernmentJobPage"))
+const NetworkingPage = React.lazy(() => import("./Components/Pages/NetworkingPage"))
+const ProgramAnalysisPage = React.lazy(() => import("./Components/Pages/ProgramAnalysisPage"))
+const InterestPage = React.lazy(() => import("./Components/Pages/InterestPage"))
+const Signup = React.lazy(() => import("./Components/Auth/Signup"))
+const Login = React.lazy(() => import("./Components/Auth/Login"))
+const MainContent = React.lazy(() => import("./Components/MainContent"))
+require('dotenv').config()
 
 
 
@@ -48,11 +59,15 @@ const dispatch = useDispatch();
     <Router>
       {!user ? (
         // display the login form 
-        <div style={{maxHieght:"100vh"}}>
+        <div style={{maxHeight:"100vh"}}>
         
         <Routes>
-        <Route  path='/Login'  element={<Login />} />
-          <Route  path='/Signup'  element={<Signup />} />
+        <Route  path='/Login'  element={<Suspense fallback={<div>Loading...</div>}>
+      <Login/>
+        </Suspense>} />
+          <Route  path='/Signup'  element={<Suspense fallback={<div>Loading...</div>}>
+      <Signup/>
+        </Suspense>} />
           <Route path="/" element={ <Navigate to="/Login" />} /> 
         </Routes>
         </div>
@@ -62,25 +77,44 @@ const dispatch = useDispatch();
         // display the rest of the app
         <div className='app__body'>
           {/* Rest of the app */}
-          <Container>
+          
       
       <div style={{justifyContent:"center", width: "20%", float:"left"}}>
     <Sidebar />
       </div>
     <div style={{justifyContent:"center", width: "80%", float:"right"}}>
+    <Container>
     <Routes>
     <Route path="/Login" element={ <Navigate to="/" />} />
-        <Route exact path='/'  element={<Home />} />
-        <Route path='/SportsPage' element={<SportsPage />} />
-        <Route path='/EsportsPage' element={<EsportsPage />} />
-        <Route path='/SingingPage' element={<SingingPage />} />
-        <Route path='/GovernmentJobPage' element={<GovernmentJobPage/>} />
-        <Route path='/NetworkingPage' element={<NetworkingPage />} />
-        <Route path='/ProgramAnalysisPage' element={<ProgramAnalysisPage />} />
-        <Route path='/Interests' element={<InterestPage />} />
+        <Route exact path='/'  element={<Suspense fallback={<div>Loading...</div>}>
+        <MainContent />
+        </Suspense> } />
+        <Route path='/SportsPage' element={<Suspense fallback={<div>Loading...</div>}>
+        <SportsPage /> 
+        </Suspense>} />
+        <Route path='/EsportsPage' element={ <Suspense fallback={<div>Loading...</div>}>
+        <EsportsPage />
+        </Suspense>} />
+        <Route path='/SingingPage' element={ <Suspense fallback={<div>Loading...</div>}>
+        <SingingPage />
+        </Suspense>} />
+        <Route path='/GovernmentJobPage' element={<Suspense fallback={<div>Loading...</div>}>
+        <GovernmentJobPage/>
+        </Suspense>} />
+        <Route path='/NetworkingPage' element={<Suspense fallback={<div>Loading...</div>}>
+        <NetworkingPage />
+        </Suspense>} />
+        <Route path='/ProgramAnalysisPage' element={<Suspense fallback={<div>Loading...</div>}>
+        <ProgramAnalysisPage />
+        </Suspense>} />
+        <Route path='/InterestsPage' element={<Suspense fallback={<div>Loading...</div>}>
+        <InterestPage />
+        </Suspense>} />
+        
     </Routes>
-    </div>
     </Container>
+    </div>
+    
         </div>
       )}
        
@@ -89,7 +123,7 @@ const dispatch = useDispatch();
 }
 
 const Container = styled.div`
-  height: 97vh;
+  height: 95vh;
   width: 100%;
   background: linear-gradient(to bottom right, white 0%, #e6e4ff 70%);
   border-radius: 2rem;

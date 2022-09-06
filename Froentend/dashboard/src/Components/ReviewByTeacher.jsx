@@ -3,8 +3,10 @@ import styled from "styled-components";
 import AvatarImage from "../assets/avatarImage4.jpg";
 import { cardShadow, hoverEffect } from "../utils";
 import Profiles from "./Profiles";
+import { useSelector } from "react-redux";
 
 function ReviewByTeacher() {
+  const displayName  = useSelector((store) => store.interest.user.displayName)
   return (
     <TeacherReview>
       <CardContent>
@@ -14,7 +16,7 @@ function ReviewByTeacher() {
               <img src={AvatarImage} alt="" />
             </Avatar>
             <Info>
-              <InfoName>Ashish Srivastav</InfoName>
+              <InfoName>{displayName}</InfoName>
               <InfoUpdate>Updated 10m ago</InfoUpdate>
             </Info>
           </InfoContainer>
@@ -34,7 +36,7 @@ function ReviewByTeacher() {
 
 const TeacherReview = styled.div`
   border-radius: 1rem;
-  height: 130%;
+  height: 80%;
   padding: 1rem;
   background-color: white;
   width: 27.5vw;

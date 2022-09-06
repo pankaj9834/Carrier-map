@@ -11,8 +11,9 @@ import QuizResults from "./QuizResults";
 
 function MainContent() {
   return (
+  
     <Container>
-      <Navbar />
+    <Navbar />
       <SubContainer>
         <SectionOne>
           <ColumnOne1>
@@ -28,7 +29,7 @@ function MainContent() {
           <ColumnOne2>
             <QuizResultContainer>
               <TitleText>
-                Viedios To Grow and understand your Interest
+                Videos To Grow and understand your Interest
               </TitleText>
               <QuizResults />
             </QuizResultContainer>
@@ -41,16 +42,18 @@ function MainContent() {
         </SectionTwo>
       </SubContainer>
     </Container>
-   
+ 
   );
 }
 
 const Container = styled.div`
   width: 100%;
+  height: 90vh;
   background: linear-gradient(to bottom right, white 0%, #e6e4ff 70%);
   border-bottom-right-radius: 2rem;
   border-top-right-radius: 2rem;
   margin: 1rem 8rem 1rem 4rem;
+  margin-bottom: 20px;
   @media screen and (min-width: 320px) and (max-width: 1080px) {
     display: flex;
     flex-direction: column;
@@ -61,10 +64,12 @@ const Container = styled.div`
 
 const SubContainer = styled.div`
   margin: 0.5rem 0;
-  height: 80%;
+  height: fit-content;
   width: 100%;
   display: flex;
+  margin-bottom: 20px;
   flex-direction: column;
+  justify-content: space-evenly;
   gap: 4rem;
   @media screen and (min-width: 320px) and (max-width: 1080px) {
     height: 100%;
@@ -72,7 +77,7 @@ const SubContainer = styled.div`
 `;
 const SectionOne = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   height: 40%;
   gap: 2rem;
   width: 100%;
@@ -83,6 +88,8 @@ const SectionOne = styled.div`
   }
 `;
 const ColumnOne1 = styled.div`
+min-height: fit-content;
+height: fit-content;
   display: flex;
   gap: 3rem;
   @media screen and (min-width: 320px) and (max-width: 1080px) {
@@ -91,14 +98,15 @@ const ColumnOne1 = styled.div`
     align-items: center;
     gap: 1rem;
     width: 100%;
+    margin-bottom: 10px;
   }
 `;
 
 const ColumnTwo1 = styled.div`
   display: flex;
   flex-direction: column;
-  height: 115%;
-  width: 100%;
+  height: fit-content;
+  width: fit-content;
   @media screen and (min-width: 320px) and (max-width: 1080px) {
     height: max-content;
     justify-content: center;
@@ -112,9 +120,10 @@ const TitleText = styled.h3`
 `;
 
 const SectionTwo = styled.div`
+  top:0;
   display: flex;
   gap: 2rem;
-  height: 26vh;
+  height: fit-content;
   @media screen and (min-width: 320px) and (max-width: 1080px) {
     flex-direction: column;
     height: max-content;
@@ -131,7 +140,7 @@ const ColumnOne2 = styled.div`
   }
 `;
 const QuizResultContainer = styled.div`
-  height: 60%;
+  height: fit-content;
   @media screen and (min-width: 320px) and (max-width: 1080px) {
     height: max-content;
     display: flex;

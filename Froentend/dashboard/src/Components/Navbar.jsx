@@ -1,10 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 // import { FiSearch } from "react-icons/fi";
+import { useSelector } from "react-redux";
 function Navbar() {
+  const displayName  = useSelector((store) => store.interest.user.displayName)
   return (
     <NavbarContainer>
-      <Text>Welcome Ashish</Text>
+      <Text>Welcome {displayName}</Text>
       {/* <InputContainer>
         <Icon>
           <FiSearch />

@@ -9,7 +9,7 @@ import {
 import { useDispatch } from 'react-redux';
 import { login } from '../ReduxSlice/interestSlice';
 import { Link } from 'react-router-dom';
-import styles from "./Login.module.css";
+import styles from "./Auth.module.css";
 
 function Signup() {
 
@@ -112,7 +112,7 @@ function Signup() {
             <div className={styles.inputDiv} >
               
           <button type='submit' onClick={register}>
-            Sign In
+            Sign Up
           </button>
             </div>
 

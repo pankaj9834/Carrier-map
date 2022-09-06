@@ -70,6 +70,7 @@ function Projects() {
 
 const YourProjects = styled.div`
   height: 70%;
+  width: 100%;
   background-color: white;
   margin: 0;
   padding: 1rem;

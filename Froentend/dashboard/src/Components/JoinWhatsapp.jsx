@@ -27,8 +27,8 @@ function JoinWhatsapp() {
 
 const JoinChannel = styled.div`
   background-color: green;
-  height: 50%;
-  margin-top: 6.5rem;
+  height: fit-content;
+  /* margin-top: ; */
   border-radius: 1rem;
   display: flex;
   align-items: center;

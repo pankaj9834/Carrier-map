@@ -1,7 +1,7 @@
-import { Card, CardContent, Row, ButtonHolder, InfoContainer, Title } from './pagesStyled';
+import { Card, CardContent, Row, ButtonHolder, InfoContainer, Title } from '../pagesStyled';
 import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
-import { removeItem, addItem } from '../ReduxSlice/interestSlice';
+import { removeItem, addItem } from '../../ReduxSlice/interestSlice';
 import { useDispatch } from 'react-redux';
 
 export default function Types(props) {
@@ -45,16 +45,6 @@ export default function Types(props) {
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
                     onClick={()=> handleClick(data)}>Add</Button>
-                   <Button  style={{
-                     backgroundColor: isHovering ? 'rgba(183, 194, 243, 0.3)' : '',
-                     color: isHovering ? '#0f4d92' : '',
-                     borderRadius:"8px", borderColor:"#0f4d92", width:"50px",
-                     width: "fit-content",
-                     height: "fit-content",
-                     marginLeft:"20px"
-                    }}
-                    onMouseEnter={handleMouseEnter}
-                    onMouseLeave={handleMouseLeave} onClick={()=>{dispatch(removeItem(data.id))}}>Remove</Button>
                     </ButtonHolder>
                     
                     {/* </InfoContainer>
